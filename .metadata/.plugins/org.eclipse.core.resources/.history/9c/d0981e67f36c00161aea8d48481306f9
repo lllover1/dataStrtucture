@@ -1,0 +1,14 @@
+package parttern;
+
+public class Utils {
+	public  int BruteForce(String target,String parttern){
+		int pLength = parttern.length();
+		int tLength = target.length();
+		if(pLength==0||tLength<par)
+		for(int i =0;i<partternLength;i++){
+			for()
+		}
+		return 0;
+	}
+
+}

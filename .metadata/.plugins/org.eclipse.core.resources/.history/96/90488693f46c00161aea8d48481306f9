@@ -1,0 +1,37 @@
+package parttern;
+
+public class Utils {
+	/**
+	 * 字符串简单匹配
+	 * @param target    目标字符串
+	 * @param parttern  模式字符串
+	 * @return 返回值 -1 匹配失败；其他 起始位置
+	 */
+	public  int BruteForce(String target,String parttern){
+		int pLength = parttern.length();
+		int tLength = target.length();
+		if(pLength==0||tLength<pLength){
+			return -1;
+		}
+		int i=0,j=0;
+		while(i<tLength&&j<pLength){
+			if(target.charAt(i)==parttern.charAt(j)){
+				i++;
+				j++;
+			}else{
+				i = i-j+1;
+				j =0;
+				if(i>tLength-pLength){
+					break;
+				}
+			}
+		}
+		if(j==pLength){
+			return i-j;
+		}else{
+			return -1;
+		}
+		return 0;
+	}
+
+}

@@ -1,0 +1,8 @@
+package parttern;
+
+public class Utils {
+	public  int BruteForce(String target,String parttern){
+		return 0;
+	}
+
+}

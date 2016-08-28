@@ -1,0 +1,9 @@
+package parttern;
+
+public class Test {
+	public static void main(String[] args){
+		Utils u = new Utils();
+		System.out.println("¥ÌŒÛ∆•≈‰"+u.BruteForce("qeweqwerr", "eqqq"));
+		System.out.println(u.BruteForce("qeweqwerr", "eqqq"));
+	}
+}
