@@ -1,8 +1,0 @@
-package parttern;
-
-public class Utils {
-	public  int BruteForce(){
-		return 0;
-	}
-
-}

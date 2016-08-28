@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="adt.SeqList"/>
-<fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
-<fullyQualifiedTypeName name="adt.List"/>
-<fullyQualifiedTypeName name="adt.LinkedList"/>
-<fullyQualifiedTypeName name="adt.Node"/>
-<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-</qualifiedTypeNameHistroy>

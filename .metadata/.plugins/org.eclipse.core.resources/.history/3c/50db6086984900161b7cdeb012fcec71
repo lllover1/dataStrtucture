@@ -1,8 +1,0 @@
-package adt;
-
-public class Node<T> {
-	//=====================================================================
-	//¿‡ÀΩ”– Ù–‘
-	private T data;
-	private Node<T> next;
-}
