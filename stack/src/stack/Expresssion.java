@@ -93,4 +93,81 @@ public class Expresssion {
 		}
 		return result;
 	}
+	
+	public int calInfix(String infix) {
+
+		MyStack<Integer> numStack = new SeqStack<>();
+		MyStack<Character> cStack = new SeqStack<>();
+
+		int i = 0;
+		int result;
+		while (i < infix.length()) {
+			char c = infix.charAt(i);
+			switch (c) {
+			case '+':
+			case '-':
+				while (!cStack.isEmpty() && !cStack.peek().equals('(')) {
+					result = cal(numStack.pop(),numStack.pop(),cStack.pop());
+					numStack.push(result);
+				}
+				cStack.push(c);
+				i++;
+				break;
+			case '*':
+			case '/':
+				while(!cStack.isEmpty() && (cStack.peek().equals('*')||cStack.peek().equals('/'))){
+					result = cal(numStack.pop(),numStack.pop(),cStack.pop());
+					numStack.push(result);
+				}
+				cStack.push(c);
+				i++;
+				break;
+			case '(':
+				cStack.push(c);
+				i++;
+				break;
+			case ')':
+				while (!cStack.isEmpty() && !cStack.peek().equals('(')) {
+					result = cal(numStack.pop(),numStack.pop(),cStack.pop());
+					numStack.push(result);
+				}
+				cStack.pop();
+				i++;
+				break;
+			default:
+				int value =0;
+				while(i<infix.length()&&(c=infix.charAt(i))>='0'&&c<='9'){
+					value = value*10+c-'0';
+					i++;
+				}
+				numStack.push(value);
+			}
+			
+		}
+		while(!cStack.isEmpty()){
+			result = cal(numStack.pop(),numStack.pop(),cStack.pop());
+			numStack.push(result);
+		}
+		return numStack.pop();
+	}
+
+    public int cal(int x,int y,char c){
+    	int result = 0;
+    	switch(c){
+    	case '+':
+    		result = x + y;
+    		break;
+    	case '-':
+    		result = y - x;
+    		break;
+    	case '*':
+    		result = y * x;
+    		break;
+    	case '/':
+    		result = y / x;
+    		break;
+    	}
+    	return result;
+    }
+
 }

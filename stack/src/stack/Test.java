@@ -6,5 +6,8 @@ public class Test {
 		System.out.println(s);
 		int i = new Expresssion().calPostfix(s);
 		System.out.println(i);
+		
+		i = new Expresssion().calInfix("((1+2*3)*4-5)/6");
+		System.out.println(i);
 	}
 }
