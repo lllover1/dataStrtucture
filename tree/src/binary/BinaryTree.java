@@ -1,5 +1,7 @@
 package binary;
 
+import java.util.concurrent.LinkedBlockingDeque;
+
 import adt.MyTree;
 
 public class BinaryTree<T> extends MyTree<T> {
@@ -154,7 +156,20 @@ public class BinaryTree<T> extends MyTree<T> {
 
 	@Override
 	public void levelorder() {
-
+		System.out.println("²ã´Î±éÀú");
+		LinkedBlockingDeque<BinaryNode<T>> queue = new LinkedBlockingDeque<>();
+		BinaryNode<T> p = this.root;
+		while(p!=null){
+			System.out.println(p.getData());
+			if(p.getLeft()!=null){
+				queue.add(p.getLeft());
+			}
+			if(p.getRight()!=null){
+				queue.add(p.getRight());
+			}
+			p = queue.pop();
+		}
+		System.out.println("end");
 	}
 
 	@Override
