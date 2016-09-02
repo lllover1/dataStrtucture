@@ -1,7 +1,6 @@
 package graph;
 
 import adt.LinkedList;
-
 public class LinkedMatrix {
 	private int rows,columns;
 	
