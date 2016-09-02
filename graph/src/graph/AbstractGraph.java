@@ -2,9 +2,15 @@ package graph;
 
 import adt.SeqList;
 
+/**
+ * 图的带权实现
+ * @author llw
+ *
+ * @param <T> 顶点元素类型
+ */
 public abstract class AbstractGraph<T> {
-	protected static final int MAX_WEIGHT = 0x0000fff;
-	protected SeqList<T> vertexlist;
+	protected static final int MAX_WEIGHT = 0x0000fff;  //最大权值
+	protected SeqList<T> vertexlist;                    //顶点顺序表
 	
 	/*******************************************************/
 	//构造方法

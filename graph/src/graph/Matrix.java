@@ -1,5 +1,10 @@
 package graph;
 
+/**
+ * ¾ØÕó¶ÔÏó ´æ´¢ÁÚ½Ó¾ØÕó
+ * @author llw
+ *
+ */
 public class Matrix {
 	private int rows,columns;
 	private int[][] element;
