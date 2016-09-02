@@ -41,7 +41,6 @@ public class Expression extends BinaryTree<ExpData> {
 	public int toValue(BinaryNode<ExpData> p){
 		if(p ==null){
 			return 0;
-			
 		}
 		return 0;
 	}
