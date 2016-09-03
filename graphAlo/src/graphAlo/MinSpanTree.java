@@ -23,12 +23,17 @@ public class MinSpanTree {
 		
 		for(int j=0;j<length;j++){
 			int min = 0;
+			int minCost =Integer.MAX_VALUE;
 			for(int k =0;k<length;k++){
-				if(!s[k]&&lowcost[k]<lowcost[min]){
+				if(!s[k]&&lowcost[k]<minCost){
+					minCost = lowcost[k];
 					min = k;
 				}
 			}
-			s[i] = true;
+			if(minCost == Integer.MAX_VALUE){
+				break;
+			}
+			s[min] = true;
 			for(int k =0;k<length;k++){
 				if(!s[k]&&graph[min][k]<lowcost[k]){
 					close[k] =  min;
